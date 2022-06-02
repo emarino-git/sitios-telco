@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -12,6 +11,7 @@ function App() {
           className="App-link"
           href="https://edenor.sharepoint.com/:u:/s/GO365_DOCUMENTACIONTELCO-DiagramasREDLAN/EcgW1gPW9P9Fon1b7EloSDIBtOW7S7_9EY2GsDa-_mGQiw?e=KYUbEp"
           target="_blank"
+          rel="noreferrer"
         >
           CR Cazador
         </a>
@@ -24,6 +24,7 @@ function App() {
           className="App-link"
           href="https://edenor.sharepoint.com/:u:/s/GO365_DOCUMENTACIONTELCO-DiagramasREDLAN/EcFYo8FUKZxBgQNlxWUods0BeNcc0erdZBzb9h5e-yGgzg?e=Pu73OG"
           target="_blank"
+          rel="noreferrer"
         >
           CR El Cruce
         </a>
