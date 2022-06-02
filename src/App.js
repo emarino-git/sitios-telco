@@ -11,12 +11,28 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://edenor.sharepoint.com/:u:/s/GO365_DOCUMENTACIONTELCO-DiagramasREDLAN/EcgW1gPW9P9Fon1b7EloSDIBtOW7S7_9EY2GsDa-_mGQiw?e=KYUbEp"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          Learn React
+          CR Cazador
         </a>
+        <ul>
+          <li>Localidad: El Cazador</li>
+          <li>Partido: Escobar</li>
+          <li>Región: 3</li>
+        </ul>
+        <a
+          className="App-link"
+          href="https://edenor.sharepoint.com/:u:/s/GO365_DOCUMENTACIONTELCO-DiagramasREDLAN/EcFYo8FUKZxBgQNlxWUods0BeNcc0erdZBzb9h5e-yGgzg?e=Pu73OG"
+          target="_blank"
+        >
+          CR El Cruce
+        </a>
+        <ul>
+          <li>Localidad: Dique Lujan</li>
+          <li>Partido: Tigre</li>
+          <li>Región: 3</li>
+        </ul>
       </header>
     </div>
   );
