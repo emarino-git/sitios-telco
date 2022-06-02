@@ -33,6 +33,7 @@ function App() {
           <li>Partido: Tigre</li>
           <li>Región: 3</li>
         </ul>
+        <a className="App-link" href='https://edenor.sharepoint.com/:i:/s/GO365_DOCUMENTACIONTELCO-FOTOS/EVheW9nADfRKtg59eLcReK0BdBFOqM1jsGoRdMQGtVbpxg?e=PDHGOn'>Foto rack</a>
       </header>
     </div>
   );
