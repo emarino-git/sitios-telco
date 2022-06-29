@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.KeyboardArrowDownRoundedIcon {
+  color: #61dafb;
+  cursor: pointer;
+  transform: scale(3);
+}
+
+.App-main {
+  min-height: 100vh;
+}
