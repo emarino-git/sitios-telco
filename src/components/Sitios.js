@@ -1,5 +1,5 @@
 import { Autocomplete, Button, TextField } from '@mui/material';
-import { sitiosData, sharepoint, servidorVpn } from '../data/Sitios'
+import { sitiosData, sharepoint } from '../data/Sitios'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import LanIcon from '@mui/icons-material/Lan';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
