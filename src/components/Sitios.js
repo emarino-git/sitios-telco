@@ -1,8 +1,8 @@
 import { Autocomplete, Button, TextField } from '@mui/material';
-import { sitiosData, sharepoint } from '../data/Sitios'
+import { sitiosData, sharepoint, servidorVpn } from '../data/Sitios'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import LanIcon from '@mui/icons-material/Lan';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './Sitios.css'
 
 export default function Sitios() {
@@ -19,7 +19,7 @@ export default function Sitios() {
 
     const [sitio, setSitio] = useState(listadoSitios[0])
 
-    result = sitio.label    
+    result = sitio.label
 
     // Busqueda de Key de Sitio
 
@@ -32,6 +32,8 @@ export default function Sitios() {
         }
     }
 
+
+
     return (
         <div className='sitios-page'>
             <h1>Busqueda de documetación por Sitio</h1>
@@ -42,7 +44,7 @@ export default function Sitios() {
                 options={listadoSitios}
                 onChange={(event, newValue) => {
                     setSitio(newValue);
-                  }}
+                }}
                 sx={{ width: 300 }}
                 renderInput={(params) => <TextField {...params} label="Sitio" />}
                 disableClearable
@@ -72,6 +74,15 @@ export default function Sitios() {
                 target="_blank"
             >
                 Plano de RED
+            </Button>
+            <h3>Archivos por VPN</h3>
+            <Button
+                variant="outlined"
+                startIcon={<LanIcon />}
+                href={servidorVpn}
+            // target="_blank"
+            >
+                Plano de Planta
             </Button>
         </div>
     )

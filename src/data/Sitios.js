@@ -1,5 +1,7 @@
 export const sharepoint = "https://edenor.sharepoint.com/:u:/s/GO365_DOCUMENTACIONTELCO-DiagramasREDLAN/"
 
+export const servidorVpn = "file://///pro.edenor/Datostro/Privado/GCATEL/Exp-CRT/12_Planos/Fotos/"
+
 export const sitiosData = [ 
     {
         "Tipo": "",
@@ -18,6 +20,7 @@ export const sitiosData = [
         "Nombre": "El Cazador",
         "Nomenclatura": "CR-CAZA",
         "PlanoREDLAN": "EcgW1gPW9P9Fon1b7EloSDIBtOW7S7_9EY2GsDa-_mGQiw",
+        "PlanoPlanta": "CR_CAZADOR/ECR-CAZA_PLANTA.dwg",
         "Locaciones": ["Sala de Comando", "Caseta de Telecomunicaciones"],
         "Dirección": "",
         "Localidad": "El Cazador",
@@ -29,7 +32,7 @@ export const sitiosData = [
         "Tipo": "CR",
         "Nombre": "El Cruce",
         "Nomenclatura": "CR-CRUCE",
-        "PlanoREDLAN": "EcFYo8FUKZxBgQNlxWUods0BeNcc0erdZBzb9h5e-yGgzg",
+        "PlanoREDLAN": "EcFYo8FUKZxBgQNlxWUods0BeNcc0erdZBzb9h5e-yGgzg",                        
         "Locaciones": [""],
         "Dirección": "",
         "Localidad": "Cuartel V",
