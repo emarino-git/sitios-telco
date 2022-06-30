@@ -2,7 +2,7 @@ import { Autocomplete, Button, TextField } from '@mui/material';
 import { sitiosData, sharepoint, servidorVpn } from '../data/Sitios'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import LanIcon from '@mui/icons-material/Lan';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import './Sitios.css'
 
 export default function Sitios() {
