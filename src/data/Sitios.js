@@ -558,20 +558,6 @@ export const sitiosData = [
     },
     {
         "Tipo": "OFICINA COMERCIAL",
-        "Nombre": "MERLO",
-        "Nomenclatura": "EOC-MERL",
-        "PlanoREDLAN": "",
-        "PlanoREDELEC": "",
-        "LOCACIONES": "",
-        "Dirección": "9 de Julio 90 - Merlo - Bs.As.",
-        "Localidad": "Merlo",
-        "Partido": "",
-        "Región": "MERLO",
-        "Latitud": "",
-        "Longitud": ""
-    },
-    {
-        "Tipo": "OFICINA COMERCIAL",
         "Nombre": "MORENO",
         "Nomenclatura": "EOC-MORE",
         "PlanoREDLAN": "",
