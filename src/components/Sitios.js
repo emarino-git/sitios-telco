@@ -67,7 +67,7 @@ export default function Sitios() {
                     className='link-button'
                     variant="outlined"
                     startIcon={<ElectricBoltIcon />}
-                    href={sharepoint.RedElectricaSUF + sitiosData[key].PlanoREDELEC}
+                    href={sharepoint.RedElectricaPRE + sitiosData[key].PlanoREDELEC + sharepoint.RedElectricaSUF }
                     target="_blank"
                 >
                     Plano de ALIMENTACION
@@ -77,7 +77,7 @@ export default function Sitios() {
         return <></>;
     }
 
-    // Link a Plano eléctrico  
+    // Link a Plano RED LAN  
     function PlanoRedLan(props) {
         const existePlanoRedLan = props.existePlanoRedLan;
         if (existePlanoRedLan) {
@@ -86,10 +86,10 @@ export default function Sitios() {
                         className='link-button'
                         variant="outlined"
                         startIcon={<LanIcon />}
-                        href={sharepoint.RedLAN + sitiosData[key].PlanoREDLAN}
+                        href={sharepoint.RedLAN + sitiosData[key].PlanoREDLAN + sharepoint.RedElectricaSUF}
                         target="_blank"
                     >
-                        Plano de RED
+                        Plano de RED LAN
                     </Button>
             );
         }

@@ -1,7 +1,7 @@
 export const sharepoint = {
     "RedLAN": "https://edenor.sharepoint.com/:u:/r/sites/GO365_DOCUMENTACIONTELCO-DiagramasREDLAN/Documentos%20compartidos/Diagramas%20RED%20LAN/",
-    "RedElectricaSUF": "https://edenor.sharepoint.com/:b:/r/sites/GO365_DOCUMENTACIONTELCO-DiagramasREDELECTRICA/Documentos%20compartidos/Diagramas%20RED%20ELECTRICA/",
-    "RedElectricaPRE": "?csf=1&web=1&e=EeBPSS"
+    "RedElectricaPRE": "https://edenor.sharepoint.com/:b:/r/sites/GO365_DOCUMENTACIONTELCO-DiagramasREDELECTRICA/Documentos%20compartidos/Diagramas%20RED%20ELECTRICA/",
+    "RedElectricaSUF": "?csf=1&web=1&e=EeBPSS"
 }
 
 // "https://edenor.sharepoint.com/:u:/r/sites/GO365_DOCUMENTACIONTELCO-DiagramasREDLAN/Documentos%20compartidos/Diagramas%20RED%20LAN/ESE-COLE_REDLAN.vsdx?d=w30af9979239c4b159bd729b6f8e80305&csf=1&web=1&e=jq4Emn"
