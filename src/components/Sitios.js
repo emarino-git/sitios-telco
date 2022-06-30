@@ -2,16 +2,22 @@ import { Autocomplete, Button, TextField } from '@mui/material';
 import { sitiosData, sharepoint, servidorVpn } from '../data/Sitios'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import LanIcon from '@mui/icons-material/Lan';
+import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import { useState } from 'react';
 import './Sitios.css'
 
 export default function Sitios() {
 
-    const listadoSitios = [
-        { label: '', year: 0 },
-        { label: 'El Cazador', year: 1994 },
-        { label: 'El Cruce', year: 1972 },
-    ]
+    // Listado de sitios para búsqueda
+
+    let listadoSitios = [];
+
+    listadoSitios = sitiosData.map(function (elem) {
+        let returnTipoNombre = { label: elem.Tipo + " " + elem.Nombre, result: elem.Nombre }
+        return returnTipoNombre;
+    });
+
+    listadoSitios.sort()
 
     // Resultado de busqueda
 
@@ -19,7 +25,7 @@ export default function Sitios() {
 
     const [sitio, setSitio] = useState(listadoSitios[0])
 
-    result = sitio.label
+    result = sitio.result
 
     // Busqueda de Key de Sitio
 
@@ -31,6 +37,46 @@ export default function Sitios() {
             key = keyFind
         }
     }
+
+    console.log(key)
+
+    // Link a GOOGLE (mover a components)
+    function GoogleLink(props) {
+        const existeCoordenada = props.existeCoordenada;
+        if (existeCoordenada) {
+            return (
+                <Button
+                    variant="outlined"
+                    startIcon={<AddLocationAltIcon />}
+                    href={`https://www.google.com.ar/maps/dir//${sitiosData[key].Latitud},${sitiosData[key].Longitud}/@${sitiosData[key].Latitud},${sitiosData[key].Longitud},17z`}
+                    target="_blank"
+                >
+                    Cómo llegar
+                </Button>
+            );
+        }
+        return <p>Sin coordanada</p>;
+    }
+
+    // Link a Plano eléctrico  
+    function PlanoRedElectricaLink(props) {
+        const existePlanoRedElec = props.existePlanoRedElec;
+        if (existePlanoRedElec) {
+            return (
+                <Button
+                    className='link-button'
+                    variant="outlined"
+                    startIcon={<ElectricBoltIcon />}
+                    href={sharepoint.RedElectricaSUF + sitiosData[key].PlanoREDELEC}
+                    target="_blank"
+                >
+                    Plano de ALIMENTACION
+                </Button>
+            );
+        }
+        return <></>;
+    }
+
 
 
 
@@ -45,12 +91,12 @@ export default function Sitios() {
                 onChange={(event, newValue) => {
                     setSitio(newValue);
                 }}
-                sx={{ width: 300 }}
+                sx={{ width: "90vw" }}
                 renderInput={(params) => <TextField {...params} label="Sitio" />}
                 disableClearable
             />
 
-            <h3>{sitiosData[key].Nombre}</h3>
+            <h3>{sitio.label}</h3>
 
             Localidad: {sitiosData[key].Localidad}
             <br></br>
@@ -58,23 +104,24 @@ export default function Sitios() {
             <br></br>
             Región {sitiosData[key].Región}
             <br /><br />
-            <Button
-                variant="outlined"
-                startIcon={<AddLocationAltIcon />}
-                href={`https://www.google.com.ar/maps/dir//${sitiosData[key].Coordenadas[0]},${sitiosData[key].Coordenadas[1]}/@${sitiosData[key].Coordenadas[0]},${sitiosData[key].Coordenadas[1]},17z`}
-                target="_blank"
-            >
-                Cómo llegar
-            </Button>
-            <br /><br />
-            <Button
-                variant="outlined"
-                startIcon={<LanIcon />}
-                href={sharepoint + sitiosData[key].PlanoREDLAN}
-                target="_blank"
-            >
-                Plano de RED
-            </Button>
+            <GoogleLink className="boton-link" existeCoordenada={(sitiosData[key].Latitud !== "")} />
+            <div className='link-planos' >
+                <div className='boton-link'>
+                    <PlanoRedElectricaLink existePlanoRedElec={(sitiosData[key].PlanoREDELEC !== "")} />
+                </div>
+                <div className='boton-link'>
+                    <Button
+                        className='link-button'
+                        variant="outlined"
+                        startIcon={<LanIcon />}
+                        href={sharepoint.RedLAN + sitiosData[key].PlanoREDLAN}
+                        target="_blank"
+                    >
+                        Plano de RED
+                    </Button>
+                </div>
+            </div>
+
             <h3>Archivos por VPN</h3>
             <Button
                 variant="outlined"
