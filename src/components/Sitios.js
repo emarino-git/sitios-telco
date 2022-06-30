@@ -77,6 +77,25 @@ export default function Sitios() {
         return <></>;
     }
 
+    // Link a Plano eléctrico  
+    function PlanoRedLan(props) {
+        const existePlanoRedLan = props.existePlanoRedLan;
+        if (existePlanoRedLan) {
+            return (
+                <Button
+                        className='link-button'
+                        variant="outlined"
+                        startIcon={<LanIcon />}
+                        href={sharepoint.RedLAN + sitiosData[key].PlanoREDLAN}
+                        target="_blank"
+                    >
+                        Plano de RED
+                    </Button>
+            );
+        }
+        return <></>;
+    }
+
 
 
 
@@ -110,7 +129,8 @@ export default function Sitios() {
                     <PlanoRedElectricaLink existePlanoRedElec={(sitiosData[key].PlanoREDELEC !== "")} />
                 </div>
                 <div className='boton-link'>
-                    <Button
+                    <PlanoRedLan existePlanoRedLan={(sitiosData[key].PlanoREDLAN !== "")} />
+                    {/* <Button
                         className='link-button'
                         variant="outlined"
                         startIcon={<LanIcon />}
@@ -118,11 +138,13 @@ export default function Sitios() {
                         target="_blank"
                     >
                         Plano de RED
-                    </Button>
+                    </Button> */}
                 </div>
             </div>
 
-            <h3>Archivos por VPN</h3>
+            <h4>Código de Sitio: {sitiosData[key].Nomenclatura}</h4>
+
+            {/* <h3>Archivos por VPN</h3>
             <Button
                 variant="outlined"
                 startIcon={<LanIcon />}
@@ -130,7 +152,7 @@ export default function Sitios() {
             // target="_blank"
             >
                 Plano de Planta
-            </Button>
+            </Button> */}
         </div>
     )
 }
