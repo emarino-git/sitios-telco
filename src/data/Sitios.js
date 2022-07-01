@@ -2,7 +2,6 @@ export const sharepoint = {
     "RedLAN": "https://edenor.sharepoint.com/:u:/r/sites/GO365_DOCUMENTACIONTELCO-DiagramasREDLAN/Documentos%20compartidos/Diagramas%20RED%20LAN/",
     "RedElectricaPRE": "https://edenor.sharepoint.com/:b:/r/sites/GO365_DOCUMENTACIONTELCO-DiagramasREDELECTRICA/Documentos%20compartidos/Diagramas%20RED%20ELECTRICA/",
     "RedElectricaSUF": "?csf=1&web=1&e=EeBPSS",
-    "PlanosDWG": false,
     "Fotos": "https://edenor.sharepoint.com/:i:/r/sites/GO365_DOCUMENTACIONTELCO-FotosporSitio/Documentos%20compartidos/Fotos%20por%20Sitio/",
     "PlanosDWG": "https://edenor.sharepoint.com/:f:/r/sites/GO365_DOCUMENTACIONTELCO-PlanosporSITIO/Documentos%20compartidos/Planos%20por%20SITIO/" 
 }
