@@ -5,6 +5,7 @@ import LanIcon from '@mui/icons-material/Lan';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import { useState } from 'react';
 import './Sitios.css'
+import MasonryImageList from './Fotos';
 
 export default function Sitios() {
 
@@ -37,8 +38,6 @@ export default function Sitios() {
             key = keyFind
         }
     }
-
-    console.log(key)
 
     // Link a GOOGLE (mover a components)
     function GoogleLink(props) {
@@ -96,6 +95,26 @@ export default function Sitios() {
         return <></>;
     }
 
+    // Link a Fotos
+
+    function Fotos(props) {
+        const existenFotos = props.existenFotos;
+        if (existenFotos) {
+            return (
+                <Button
+                        className='link-button'
+                        variant="outlined"
+                        startIcon={<LanIcon />}
+                        href={sharepoint.Fotos + sitiosData[key].Tipo + "_" + sitiosData[key].Nombre }
+                        target="_blank"
+                    >
+                        Fotos
+                    </Button>
+            );
+        }
+        return <></>;
+    }
+
 
 
 
@@ -130,29 +149,15 @@ export default function Sitios() {
                 </div>
                 <div className='boton-link'>
                     <PlanoRedLan existePlanoRedLan={(sitiosData[key].PlanoREDLAN !== "")} />
-                    {/* <Button
-                        className='link-button'
-                        variant="outlined"
-                        startIcon={<LanIcon />}
-                        href={sharepoint.RedLAN + sitiosData[key].PlanoREDLAN}
-                        target="_blank"
-                    >
-                        Plano de RED
-                    </Button> */}
+                </div>
+                <div className='boton-link'>
+                    <Fotos existenFotos={(sitiosData[key].Fotos)} />
                 </div>
             </div>
 
             <h4>Código de Sitio: {sitiosData[key].Nomenclatura}</h4>
 
-            {/* <h3>Archivos por VPN</h3>
-            <Button
-                variant="outlined"
-                startIcon={<LanIcon />}
-                href={servidorVpn}
-            // target="_blank"
-            >
-                Plano de Planta
-            </Button> */}
+
         </div>
     )
 }
