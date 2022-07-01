@@ -3,6 +3,7 @@ import { sitiosData, sharepoint } from '../data/Sitios'
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import LanIcon from '@mui/icons-material/Lan';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import { useState } from 'react';
 import './Sitios.css'
 
@@ -103,7 +104,7 @@ export default function Sitios() {
                 <Button
                     className='link-button'
                     variant="outlined"
-                    startIcon={<LanIcon />}
+                    startIcon={<PhotoLibraryIcon />}
                     href={sharepoint.Fotos + sitiosData[key].Tipo + "_" + sitiosData[key].Nombre}
                     target="_blank"
                 >
