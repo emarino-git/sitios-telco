@@ -5,7 +5,6 @@ import LanIcon from '@mui/icons-material/Lan';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import { useState } from 'react';
 import './Sitios.css'
-import MasonryImageList from './Fotos';
 
 export default function Sitios() {
 
