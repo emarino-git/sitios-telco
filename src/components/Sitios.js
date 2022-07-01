@@ -65,7 +65,7 @@ export default function Sitios() {
                     className='link-button'
                     variant="outlined"
                     startIcon={<ElectricBoltIcon />}
-                    href={sharepoint.RedElectricaPRE + sitiosData[key].PlanoREDELEC + sharepoint.RedElectricaSUF }
+                    href={sharepoint.RedElectricaPRE + sitiosData[key].PlanoREDELEC + sharepoint.RedElectricaSUF}
                     target="_blank"
                 >
                     Plano de ALIMENTACION
@@ -81,14 +81,14 @@ export default function Sitios() {
         if (existePlanoRedLan) {
             return (
                 <Button
-                        className='link-button'
-                        variant="outlined"
-                        startIcon={<LanIcon />}
-                        href={sharepoint.RedLAN + sitiosData[key].PlanoREDLAN + sharepoint.RedElectricaSUF}
-                        target="_blank"
-                    >
-                        Plano de RED LAN
-                    </Button>
+                    className='link-button'
+                    variant="outlined"
+                    startIcon={<LanIcon />}
+                    href={sharepoint.RedLAN + sitiosData[key].PlanoREDLAN + sharepoint.RedElectricaSUF}
+                    target="_blank"
+                >
+                    Plano de RED LAN
+                </Button>
             );
         }
         return <></>;
@@ -101,14 +101,14 @@ export default function Sitios() {
         if (existenFotos) {
             return (
                 <Button
-                        className='link-button'
-                        variant="outlined"
-                        startIcon={<LanIcon />}
-                        href={sharepoint.Fotos + sitiosData[key].Tipo + "_" + sitiosData[key].Nombre }
-                        target="_blank"
-                    >
-                        Fotos
-                    </Button>
+                    className='link-button'
+                    variant="outlined"
+                    startIcon={<LanIcon />}
+                    href={sharepoint.Fotos + sitiosData[key].Tipo + "_" + sitiosData[key].Nombre}
+                    target="_blank"
+                >
+                    Fotos
+                </Button>
             );
         }
         return <></>;
@@ -149,9 +149,9 @@ export default function Sitios() {
                 <div className='boton-link'>
                     <PlanoRedLan existePlanoRedLan={(sitiosData[key].PlanoREDLAN !== "")} />
                 </div>
-                <div className='boton-link'>
-                    <Fotos existenFotos={(sitiosData[key].Fotos)} />
-                </div>
+            </div>
+            <div className='boton-link'>
+                <Fotos existenFotos={(sitiosData[key].Fotos)} />
             </div>
 
             <h4>Código de Sitio: {sitiosData[key].Nomenclatura}</h4>
