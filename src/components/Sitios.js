@@ -4,6 +4,7 @@ import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import LanIcon from '@mui/icons-material/Lan';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
+import BackupTableIcon from '@mui/icons-material/BackupTable';
 import { useState } from 'react';
 import './Sitios.css'
 
@@ -69,7 +70,7 @@ export default function Sitios() {
                     href={sharepoint.RedElectricaPRE + sitiosData[key].PlanoREDELEC + sharepoint.RedElectricaSUF}
                     target="_blank"
                 >
-                    Plano de ALIMENTACION
+                    Diagrama de ALIMENTACION
                 </Button>
             );
         }
@@ -88,7 +89,7 @@ export default function Sitios() {
                     href={sharepoint.RedLAN + sitiosData[key].PlanoREDLAN + sharepoint.RedElectricaSUF}
                     target="_blank"
                 >
-                    Plano de RED LAN
+                    Diagrama de RED LAN
                 </Button>
             );
         }
@@ -114,6 +115,26 @@ export default function Sitios() {
         }
         return <></>;
     }
+
+    // Planos en DWG
+    function PlanosDWG(props) {
+        const existenPlanosDWG = props.existenPlanosDWG;
+        if (existenPlanosDWG) {
+            return (
+                <Button
+                    className='link-button'
+                    variant="outlined"
+                    startIcon={<BackupTableIcon />}
+                    href={sharepoint.PlanosDWG + sitiosData[key].Tipo + "_" + sitiosData[key].Nombre}
+                    target="_blank"
+                >
+                    Planos
+                </Button>
+            );
+        }
+        return <></>;
+    }
+
 
 
 
@@ -143,6 +164,9 @@ export default function Sitios() {
             Región {sitiosData[key].Región}
             <br /><br />
             <GoogleLink className="boton-link" existeCoordenada={(sitiosData[key].Latitud !== "")} />
+            <div className="h-divider">
+                <div className="shadow"></div>
+            </div>
             <div className='link-planos' >
                 <div className='boton-link'>
                     <PlanoRedElectricaLink existePlanoRedElec={(sitiosData[key].PlanoREDELEC !== "")} />
@@ -150,12 +174,17 @@ export default function Sitios() {
                 <div className='boton-link'>
                     <PlanoRedLan existePlanoRedLan={(sitiosData[key].PlanoREDLAN !== "")} />
                 </div>
+                <div className='boton-link'>
+                    <PlanosDWG existenPlanosDWG={(sitiosData[key].PlanosDWG)} />
+                </div>
             </div>
             <div className='boton-link'>
                 <Fotos existenFotos={(sitiosData[key].Fotos)} />
             </div>
 
             <h4>Código de Sitio: {sitiosData[key].Nomenclatura}</h4>
+
+            
 
 
         </div>
