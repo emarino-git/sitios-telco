@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header"> 
-        <h1>Documentación Telecomunicaciones</h1>
+        <h1 className='main-title'>Documentación Telecomunicaciones</h1>
         <KeyboardArrowDownRoundedIcon className='KeyboardArrowDownRoundedIcon' onClick={scroll} />
       </header>
       <div className='vertical-tabs hello'>
