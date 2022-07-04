@@ -5,6 +5,7 @@ import LanIcon from '@mui/icons-material/Lan';
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import BackupTableIcon from '@mui/icons-material/BackupTable';
+import GridOnIcon from '@mui/icons-material/GridOn';
 import { useState } from 'react';
 import './Sitios.css'
 
@@ -135,6 +136,25 @@ export default function Sitios() {
         return <></>;
     }
 
+    // Borneras FO
+    function BornerasFO(props) {
+        const existenBornerasFO = props.existenBornerasFO;
+        if (existenBornerasFO) {
+            return (
+                <Button
+                    className='link-button'
+                    variant="outlined"
+                    startIcon={<GridOnIcon />}
+                    href={sharepoint.BornerasFO + sitiosData[key].Tipo + "_" + sitiosData[key].Nombre + "_PATCHERAS-FO.xlsx"+ sharepoint.RedElectricaSUF }
+                    target="_blank"
+                >
+                    Patcheras FO
+                </Button>
+            );
+        }
+        return <></>;
+    }
+
 
 
 
@@ -176,6 +196,9 @@ export default function Sitios() {
                 </div>
                 <div className='boton-link'>
                     <PlanosDWG existenPlanosDWG={(sitiosData[key].PlanosDWG)} />
+                </div>
+                <div className='boton-link'>
+                    <BornerasFO existenBornerasFO={(sitiosData[key].BornerasFO)} />
                 </div>
             </div>
             <div className='boton-link'>
